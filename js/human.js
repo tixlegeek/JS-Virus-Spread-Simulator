@@ -10,7 +10,7 @@ var HUMAN = function(x, y, conf = {}){
   this.r = conf.r || 10;                          // Action radius
   this.health = conf.health || 100;
   this.clan = conf.clan || 0;//(uirand(3))|0;    // Clan
-  this.spritesheet = conf.spritesheet || SPRITE.sheets[this.clan];
+  this.spritesheet = conf.spritesheet || SPRITE.sheets[0];
   this.customBehaviour = conf.behaviour || {};
   this.spriteAngle = 0;                 // Sprite row
   this.spriteFrame = 0;                 // Sprite col
@@ -31,6 +31,8 @@ var HUMAN = function(x, y, conf = {}){
 
   this.sxr = 0;                         // Sensor x position
   this.syr = 0;                         // Sensor y position
+  this.fxr = 0;                         // Far sensor x position
+  this.fyr = 0;                         // Far sensor y position
 
   // Draws emitter's controls
   this.drawControls = function(){
@@ -103,7 +105,7 @@ var HUMAN = function(x, y, conf = {}){
     var bumpOnWalls = world.walls.filter(function(wall){
       return fastIntersection(
         this.x, this.y,
-        this.sxr, this.syr,
+        this.fxr, this.fyr,
         wall.a.x, wall.a.y,
         wall.b.x, wall.b.y
       )?true:false;
@@ -129,6 +131,8 @@ var HUMAN = function(x, y, conf = {}){
     this.dyr = this.y + ( this.dy * this.v );
     this.sxr = this.x + ( this.dx * this.r );
     this.syr = this.y + ( this.dy * this.r );
+    this.fxr = this.x + ( this.dx * this.r * 1.5 );
+    this.fyr = this.y + ( this.dy * this.r * 1.5 );
 
     this.spriteAngle = (16-Math.floor((rad2deg(this.a+comp)+180)/360*8))%8;
     this.spriteFrame = this.waiting?4:((this.life>>3) % this.spritesheet.col);

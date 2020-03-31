@@ -1,7 +1,7 @@
 // This canvas will display the interference pattern
 var canvas =  document.getElementById('canvas');
-canvas.width = document.body.clientWidth;
-canvas.height = document.body.clientHeight;
+/*canvas.width = document.body.clientWidth;
+canvas.height = document.body.clientHeight;*/
 /*
 // Create global controls.
 new CONTROL(globalControlScope,"range",globalControlScope.rate, { 'max':1,'min':-1, 'step':.01},"globalControlScope.rate","Animation Rate:", "input",function(e){globalControlScope.rate = this.value*1;this.changed();});
@@ -10,7 +10,7 @@ new CONTROL(globalControlScope,"range",globalControlScope.nullPatternWidth, { 'm
 */
 
 // Create the canvas obj.
-var wda = 900;
+var wda = 1200;
 var world = new WORLD(canvas,
   {
     frameDuration: 100,
@@ -66,6 +66,56 @@ var world = new WORLD(canvas,
         color:"#f00",
       },
       {
+        a:{x: 100 , y: 100 + wda},
+        b:{x: 500 , y: 100 + wda},
+        color:"#00f",
+      },
+      {
+        a:{x: 100 , y: 100 + wda},
+        b:{x: 100 , y: 500 + wda},
+        color:"#00f",
+      },
+      {
+        a:{x: 100 , y: 500 + wda},
+        b:{x: 200 , y: 500 + wda},
+        color:"#00f",
+      },
+      {
+        a:{x: 500 , y: 500 + wda},
+        b:{x: 300 , y: 500 + wda},
+        color:"#00f",
+      },
+      {
+        a:{x: 500 , y: 100 + wda},
+        b:{x: 500 , y: 500 + wda},
+        color:"#00f",
+      },
+      {
+        a:{x: 100  + wda, y: 100 + wda},
+        b:{x: 500  + wda, y: 100 + wda},
+        color:"#0f0",
+      },
+      {
+        a:{x: 100  + wda, y: 100 + wda},
+        b:{x: 100  + wda, y: 500 + wda},
+        color:"#0f0",
+      },
+      {
+        a:{x: 100  + wda, y: 500 + wda},
+        b:{x: 200  + wda, y: 500 + wda},
+        color:"#0f0",
+      },
+      {
+        a:{x: 500  + wda, y: 500 + wda},
+        b:{x: 300  + wda, y: 500 + wda},
+        color:"#0f0",
+      },
+      {
+        a:{x: 500  + wda, y: 100 + wda},
+        b:{x: 500  + wda, y: 500 + wda},
+        color:"#0f0",
+      },
+      {
         a:{x: 50, y: 50},
         b:{x: 50, y: this.canvas.height - 50},
         color:"#000",
@@ -111,7 +161,7 @@ world.humans[0].virus=new VIRUS(
   {
     life: 0,
     activated: false,
-    killRate: 10,
+    killRate: 3,
     spreadRate: 10,
     spreadTime: 1000,
   }

@@ -44,6 +44,8 @@ var SPRITESHEET = function(src, ew, eh, col, row, ex=0, ey=0){
   var tombStoneSprite = new SPRITESHEET("img/tombstone.png",70, 49, 1, 1, 0, 0);
   var SPRITES = function(){
     this.sheets=[
+      new SPRITESHEET("img/asprite0.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/asprite9.png",75, 75, 8, 8, 0, 0),
       new SPRITESHEET("img/sprite0.png",75, 75, 8, 8, 0, 0),
       new SPRITESHEET("img/sprite1.png",75, 75, 8, 8, 0, 0),
       new SPRITESHEET("img/sprite2.png",75, 75, 8, 8, 0, 0),
@@ -56,6 +58,26 @@ var SPRITESHEET = function(src, ew, eh, col, row, ex=0, ey=0){
       new SPRITESHEET("img/sprite9.png",75, 75, 8, 8, 0, 0),
       new SPRITESHEET("img/sprite10.png",75, 75, 8, 8, 0, 0),
       new SPRITESHEET("img/sprite11.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/sprite12.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/sprite13.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/sprite14.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/sprite15.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/sprite16.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/sprite17.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/sprite18.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/sprite19.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/sprite20.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/sprite21.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/sprite22.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/sprite23.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/sprite24.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/sprite25.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/sprite26.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/sprite27.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/sprite28.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/sprite29.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/sprite30.png",75, 75, 8, 8, 0, 0),
+      new SPRITESHEET("img/sprite31.png",75, 75, 8, 8, 0, 0),
 
     ];
 

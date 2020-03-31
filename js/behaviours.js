@@ -19,6 +19,11 @@ var HUMAN_DEFAULT_BEHAVIOUR = function(world){
     this.addAngle(deg2rad(180)* (Math.random()*10>5)?-1:1);
   }
 
+  if(uirand(100)<10)
+  {
+    this.addAngle(deg2rad(180)* (Math.random()*10>5)?-1:1);
+  }
+
   if(collisions.bumping==0)
   {
     this.compute_direction();

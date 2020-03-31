@@ -1,4 +1,4 @@
 var DEFAULT = {
-    nHumans: 100,
+    nHumans: 300,
     borderSize: 100,
 };

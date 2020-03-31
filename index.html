@@ -13,21 +13,28 @@
     }
 
     body, html {
-      width: 100%;
-      height: 100%;
     }
 
     canvas {
       display: block;
+      width: 100%;
+    }
+
+    #wrapper {
+      margin: auto;
+      width:1000px;
     }
   </style>
 </head>
 <body>
+    <div id="wrapper">
         <h1>JS Virus Spread Simulator</h1>
         <p>Simple toy i started to educate myself about epidemiologic simulation. I'm no doctor, it's just a toy. </p>
-        <canvas id="canvas" width="100%" height="100%" >
+        <div id="cnvwrapper">
+        <canvas id="canvas" width="2000" height="1300" >
         </canvas>
-
+      </div>
+    </div>
   <script src="js/utils.js"></script>
   <script src="js/defaults.js"></script>
   <script src="js/behaviours.js"></script>
